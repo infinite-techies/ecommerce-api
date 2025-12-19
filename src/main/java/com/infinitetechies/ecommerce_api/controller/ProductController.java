@@ -3,6 +3,7 @@ package com.infinitetechies.ecommerce_api.controller;
 import com.infinitetechies.ecommerce_api.model.dto.request.ProductRequest;
 import com.infinitetechies.ecommerce_api.model.dto.response.ProductResponse;
 import com.infinitetechies.ecommerce_api.service.inf.IProductService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.apache.coyote.Response;
@@ -16,6 +17,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/product")
+@Tag(name="Product", description = "APIs for adding, updating and removing product from Product.")
 public class ProductController {
 
     private final IProductService productService;
