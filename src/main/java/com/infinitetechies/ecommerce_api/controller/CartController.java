@@ -3,6 +3,7 @@ package com.infinitetechies.ecommerce_api.controller;
 import com.infinitetechies.ecommerce_api.model.dto.request.CartItemRequest;
 import com.infinitetechies.ecommerce_api.model.dto.response.CartResponse;
 import com.infinitetechies.ecommerce_api.service.inf.ICartService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/cart")
+@Tag(name="Cart", description = "APIs for adding, updating and removing product from cart.")
 public class CartController {
 
     private final ICartService cartService;
