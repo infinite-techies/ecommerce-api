@@ -4,6 +4,7 @@ import com.infinitetechies.ecommerce_api.model.dto.request.OrderRequest;
 import com.infinitetechies.ecommerce_api.model.dto.request.OrderStatusUpdateRequest;
 import com.infinitetechies.ecommerce_api.model.dto.response.OrderResponse;
 import com.infinitetechies.ecommerce_api.service.inf.IOrderService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -15,6 +16,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/order")
+@Tag(name="Order", description = "APIs for adding, updating and removing product from order.")
 public class OrderController {
 
     private final IOrderService orderService;
