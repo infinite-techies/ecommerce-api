@@ -50,4 +50,9 @@ public class OrderController {
         return "Hi";
     }
 
+    @GetMapping("/dummyHello")
+    public String dummyHello(){
+        return "Hi Hello";
+    }
+
 }
