@@ -45,4 +45,9 @@ public class OrderController {
         return ResponseEntity.ok(order);
     }
 
+    @GetMapping("/dummyHello")
+    public String dummyHello(){
+        return "Hi Hello";
+    }
+
 }
